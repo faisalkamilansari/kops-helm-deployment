@@ -1,0 +1,21 @@
+apiVersion: kops.k8s.io/v1alpha1
+kind: Cluster
+metadata:
+  name: my-cluster.faisal.com
+spec:
+  kubernetesVersion: 1.21.0
+  api:
+    loadBalancer:
+      type: Public
+  networking:
+    calico: {}
+  cloudProvider:
+    aws:
+      s3Bucket: faisal-cluster-bucket
+      iam:
+        profile: faisal-cluster-profile
+  etcdClusters:
+    - name: main
+      version: 3.4.13
+    - name: events
+      version: 3.4.13

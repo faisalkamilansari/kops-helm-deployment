@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helm-deployment
+  template:
+    metadata:
+      labels:
+        app: helm-deployment
+    spec:
+      containers:
+        - name: helm
+          image: alpine/helm
+          command: ["helm"]
+          args: ["version"]
