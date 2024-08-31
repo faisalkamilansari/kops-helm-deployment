@@ -16,3 +16,10 @@ This repository contains configurations for setting up a Kubernetes cluster usin
    ```bash
    git clone https://github.com/yourusername/kops-helm-deployment.git
    cd kops-helm-deployment
+   ```
+2. **Create cluster**
+   ```bash
+   sudo chmod +x ./scripts/setup-cluster.sh
+   ./scripts/setup-cluster.sh
+   ```
+   
