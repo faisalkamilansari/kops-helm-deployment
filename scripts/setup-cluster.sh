@@ -4,7 +4,7 @@
 kops create cluster --config deployments/kops/kops-config.yaml
 
 # Update and validate the cluster
-kops update cluster --name my-cluster.example.com --yes
+kops update cluster --name my-cluster.faisal.com --yes
 kops validate cluster
 
 # Install Helm
